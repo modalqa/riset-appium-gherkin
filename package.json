@@ -1,0 +1,29 @@
+{
+  "name": "appium-node",
+  "author": "Faris",
+  "version": "1.0.0",
+  "description": "Aladin Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/instruments",
+    "android_test": "NODE_ENV=PLATFORM=android cucumber-js features/*.feature  -r features/support -r features/android -r features/step_definitions --exclude features/ios",
+    "ios_test": "NODE_ENV=PLATFORM=ios cucumber-js features/*.feature PLATFORM=ios -r features/support -r features/ios -r features/step_definitions --exclude features/android",
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
+    "appium": "appium",
+    "appium-doctor": "appium-doctor"
+  },
+  "devDependencies": {
+    "appium": "^1.10.1",
+    "appium-doctor": "^1.9.0",
+    "assert": "^2.0.0",
+    "chai": "^4.1.2",
+    "cucumber": "^4.2.1",
+    "mocha": "^6.0.0",
+    "multiple-cucumber-html-reporter": "^1.12.1",
+    "wd": "^1.11.1",
+    "webdriverio": "^5.1.0"
+  },
+  "dependencies": {
+    "cucumber-html-reporter": "^5.0.0"
+  }
+}
