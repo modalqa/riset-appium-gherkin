@@ -13,7 +13,7 @@ Given('open app', async () => {
 
 When('user login', async () => {
   let einputEmail = await driver.elementById(androidPO.inputEmail);
-  await einputEmail.type("ayo@gmail.com");
+  await einputEmail.type(androidPO.emailValue);
  
 });
 
